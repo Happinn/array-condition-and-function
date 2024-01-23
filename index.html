@@ -8,55 +8,55 @@
 <body>
   
 <script src="./condition1.js"></script>
-    <!-- <script src="./function.js"></script> -->
+    <script src="./function.js"></script>
 </body>
 <script>
-//     let students = 'mubarak marvellous kehinde ekene ayodele francis'
+    let students = 'mubarak marvellous kehinde ekene ayodele francis'
 
-//     // const arrOfStds = students.split(' ')  //this splits the arrays 
+    // const arrOfStds = students.split(' ')  //this splits the arrays 
 
-//     console.log(arrOfStds.pop())  //to remove the end from an array
+    console.log(arrOfStds.pop())  //to remove the end from an array
 
-//     console.log(arrOfStds.pop()  )  //to remove the next array
+    console.log(arrOfStds.pop()  )  //to remove the next array
 
 
-//     console.log(arrOfStds.shift() )   //this remove the first array   
+    console.log(arrOfStds.shift() )   //this remove the first array   
 
     
-//     console.log(arrOfStds.unshift('marvin')) // this add the name to the begginning of the array
+    console.log(arrOfStds.unshift('marvin')) // this add the name to the begginning of the array
 
-//     console.log(arrOfStds.push('ayodele') )   //this add the name to the end of the array
+    console.log(arrOfStds.push('ayodele') )   //this add the name to the end of the array
 
-//     let otherStd1 = ['jonah', 'dami']
-//     let otherStd2 = ['benedicta', 'amin']
+    let otherStd1 = ['jonah', 'dami']
+    let otherStd2 = ['benedicta', 'amin']
 
-//     console.log(arrOfStds.push(...otherStd1) )// this add the names on 'otherStd1 to the last of the array'
+    console.log(arrOfStds.push(...otherStd1) )// this add the names on 'otherStd1 to the last of the array'
 
-//     console.log(arrOfStds.push(...otherStd2) ) // this add the names on 'otherStd1 to the last of the array'
+    console.log(arrOfStds.push(...otherStd2) ) // this add the names on 'otherStd1 to the last of the array'
 
-//     console.log(arrOfStds.splice(2,0,'marvel'))  //this add the name 'marvel' after counting 2 from the beginning of the array
+    console.log(arrOfStds.splice(2,0,'marvel'))  //this add the name 'marvel' after counting 2 from the beginning of the array
 
-//     console.log(arrOfStds.splice(2,1))  //this remove the next name after counting 2 arrays from the beginning
+    console.log(arrOfStds.splice(2,1))  //this remove the next name after counting 2 arrays from the beginning
 
-//     console.log(arrOfStds.splice(4,0,...otherStd2)) // this add the name contain in 'otherStd2' to the middle of the array after counting to the first four arrays
+    console.log(arrOfStds.splice(4,0,...otherStd2)) // this add the name contain in 'otherStd2' to the middle of the array after counting to the first four arrays
 
-//     console.log(arrOfStds.splice(arrOfStds.indexOf('amin')+1,0,'ayere','kehinde'))//this is use to add the name stated in the code counting strarting from 'amin'
+    console.log(arrOfStds.splice(arrOfStds.indexOf('amin')+1,0,'ayere','kehinde'))//this is use to add the name stated in the code counting strarting from 'amin'
 
 
-//     console.log(arrOfStds.filter(name => name.startsWith('a')))
+    console.log(arrOfStds.filter(name => name.startsWith('a')))
 
-//     console.log(arrOfStds.filter(name.charAt(0) == 'a'))
+    console.log(arrOfStds.filter(name.charAt(0) == 'a'))
 
-//     console.log(arrOfStds.filter(name => name(0) == 'a'))
+    console.log(arrOfStds.filter(name => name(0) == 'a'))
 
-//     console.log(arrOfStds.filter(name => name.includes('a')))
+    console.log(arrOfStds.filter(name => name.includes('a')))
 
-//     console.log(arrOfStds.filter(name => name.length <= 5))
+    console.log(arrOfStds.filter(name => name.length <= 5))
      
 
-//    arrOfStds.map(z => z.replace(z[0], z[0].toUpperCase()))
+   arrOfStds.map(z => z.replace(z[0], z[0].toUpperCase()))
 
-//    arrOfStds.map(z => z.slice(0, 3))
+   arrOfStds.map(z => z.slice(0, 3))
 
   
 
@@ -103,13 +103,44 @@
 
     console.log([1,2,3,4].fill((a,b)=>a/b))
 
+
+
+
+
     const fruits = ["apple","banana","orange"];
     console.log(fruits.forEach((fruits)))
+
+    for (let key in person){
+        console.log(key,person[key]);
+
+    }
+
+    const {name, age} = person;
+    console.log(name,age);
+
+    const circle = {
+        radius: 5,
+        calculateArea: function(){
+            return Math.PI*this.radius*this.radius;
+        }
+    };
+
+    console.log(circle.calculateArea());
     
 
+function person(name, age){
+    this.name = name;
+    this.age = age;
+}
 
+person.prototype.sayHello = function(){
+    console.log(Hello, my name is $(this.name) and i am $(this.age) years old.);
+}
 
-//CONDITIONAL STATEMENT
+const john = new person("john", 30);
+john.sayHello();
+
+CONDITIONAL STATEMENT
 
        
 
